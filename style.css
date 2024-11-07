@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
+/* Apply Courier New font */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   color: #000;
   background-color: #fff;
 }
@@ -21,6 +22,7 @@ body {
 
 .navbar h1 {
   font-weight: bold;
+  text-transform: lowercase; /* Ensures all lowercase */
 }
 
 .nav-links {
@@ -33,6 +35,7 @@ body {
   text-decoration: none;
   color: #000;
   font-weight: 600;
+  text-transform: lowercase; /* Ensures all lowercase */
 }
 
 .content {
@@ -42,6 +45,5 @@ body {
 
 .content h2 {
   font-size: 2em;
-  margin-bottom: 20px;
+  text-transform: lowercase; /* Ensures all lowercase */
 }
-
