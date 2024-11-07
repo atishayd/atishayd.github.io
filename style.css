@@ -12,32 +12,54 @@ body {
   background-color: #fff;
 }
 
+/* Navbar styling */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #000;
+  position: relative;
 }
 
-.navbar h1 {
-  font-weight: bold;
-  text-transform: lowercase; /* Ensures all lowercase */
+/* Home link flush to the left */
+.home-link {
+  position: absolute;
+  left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+  text-transform: lowercase;
 }
 
-.nav-links {
+/* Centered navigation links */
+.centered-nav {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
-  text-transform: lowercase; /* Ensures all lowercase */
+.centered-nav li {
+  flex-grow: 1;
+  text-align: center;
 }
 
+.centered-nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+  text-transform: lowercase;
+  padding: 5px 10px;
+  transition: background-color 0.3s, font-weight 0.3s;
+}
+
+/* Yellow highlight effect */
+.centered-nav a:hover,
+.home-link:hover {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/* Main content styling */
 .content {
   padding: 50px;
   text-align: center;
@@ -45,5 +67,52 @@ body {
 
 .content h2 {
   font-size: 2em;
-  text-transform: lowercase; /* Ensures all lowercase */
+  text-transform: lowercase;
+  font-weight: bold;
+}
+
+/* Experience container */
+.experience {
+  width: 70%;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+/* Experience headings */
+.experience h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Separator line styling */
+.separator {
+  border: none;
+  border-top: 1px solid #000; /* Very slim line */
+  margin: 10px 0; /* Spacing around the line */
+  width: 100%;
+}
+
+/* Body text with increased width */
+.experience .body {
+  width: 100%; /* Allow the body to be full width within the container */
+  max-width: 900px; /* Allow it to span out more than the headers */
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+/* Experience Image Styling */
+.experience-image img {
+  width: 100%;
+  max-width: 3000px;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* ChatGPT Green text styling */
+.highlight {
+  color: #00A67E; /* ChatGPT's green color */
+  font-weight: bold; /* Makes the text bold */
 }
