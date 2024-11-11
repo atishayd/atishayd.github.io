@@ -63,6 +63,8 @@ body {
 .content {
   padding: 50px;
   text-align: center;
+  max-width: 1200px; /* Increased max-width for wider layout */
+  margin: auto;
 }
 
 .content h2 {
@@ -71,48 +73,214 @@ body {
   font-weight: bold;
 }
 
-/* Experience container */
-.experience {
-  width: 70%;
-  max-width: 800px;
-  margin: 40px auto;
+/* Project details section */
+.project-details {
+  margin-top: 30px;
+  display: none; /* Hidden initially */
   text-align: left;
 }
 
-/* Experience headings */
-.experience h3 {
+.project-details h3,
+#ocr-project h4 {
   font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Project Panels Grid */
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.project-panel {
+  width: 80px;
+  height: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.project-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-panel p {
+  margin-top: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+/* Special styling for OCR panel */
+.special-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.vertical-text {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  color: #333;
+}
+
+/* Explanation Section Styling */
+#ocr-project {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: left;
+  max-width: 1500px; /* Increase container width for OCR section */
+}
+
+#ocr-project h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#ocr-project h4,
+#ocr-project h5 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+#ocr-project ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Explanation and Code Snippet Styling */
+.explanation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.explanation h5 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+/* Layout for Code Snippet and Explanation Text */
+.code-explanation-wrapper {
+  display: flex;
+  align-items: center; /* Vertically center align */
+  gap: 20px;
+  max-width: 100%; /* Allows the whole section to take full width */
+  padding-bottom: 15px;
+  white-space: nowrap; /* Prevents wrapping */
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  flex-wrap: nowrap;
+}
+
+
+/* Code Snippet Styling */
+.code-snippet {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  max-width: 70%; /* Allow more space for code snippet */
+  text-align: left;
+  white-space: pre; /* Preserve indentation for C++ code */
+  flex-shrink: 0; /* Prevent the snippet from shrinking */
+}
+
+
+/* Code within snippet */
+.code-snippet code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  color: #dcdcdc;
+  display: block;
+  line-height: 1.5;
+}
+
+
+/* Explanation Text Styling */
+.explanation-text {
+  flex: 1; /* Allow the text to take up remaining space */
+  font-size: 1em;
+  line-height: 1.5;
+  padding-left: 20px;
+  white-space: normal; /* Allow wrapping within the description itself */
+}
+
+/* Experience Image Styling */
+.experience-image img {
+  width: 100%;
+  max-width: 1000px; /* Limits the width of the image */
+  height: auto;
+  margin: 10px 0;
+  border-radius: 10px; /* Optional: Adds rounded corners for a polished look */
+}
+
+/* Experience container */
+.experience {
+  width: 90%; /* Reduces width of experience content to half */
+  max-width: 800px; /* Optional cap for very wide screens */
+  margin: 30px auto;
+  text-align: left;
+}
+
+/* Experience headings (Company, Position, and Duration) */
+.experience h3 {
+  font-size: 1.4em; /* Slightly larger font size */
   font-weight: bold;
   margin: 5px 0;
+  text-align: left; /* Left-aligned */
 }
 
 /* Separator line styling */
 .separator {
   border: none;
   border-top: 1px solid #000; /* Very slim line */
-  margin: 10px 0; /* Spacing around the line */
-  width: 100%;
-}
-
-/* Body text with increased width */
-.experience .body {
-  width: 100%; /* Allow the body to be full width within the container */
-  max-width: 900px; /* Allow it to span out more than the headers */
-  margin-top: 10px;
-  font-size: 1em;
-}
-
-/* Experience Image Styling */
-.experience-image img {
-  width: 100%;
-  max-width: 3000px;
-  height: auto;
   margin: 10px 0;
-  border-radius: 10px;
+  width: 100%;
+}
+
+/* Body text with reduced vertical spacing */
+.experience .body {
+  width: 100%; /* Adjusts body to be full within container */
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 8px;
+  margin-bottom: 8px; /* Reduced spacing between paragraphs */
+}
+
+/* Syntax Highlighting */
+.code-snippet .keyword {
+  color: #569cd6;
+}
+
+.code-snippet .type {
+  color: #4ec9b0;
+}
+
+.code-snippet .comment {
+  color: #6a9955;
+}
+
+.code-snippet .string {
+  color: #ce9178;
+}
+
+.code-snippet .function {
+  color: #dcdcaa;
 }
 
 /* ChatGPT Green text styling */
 .highlight {
   color: #00A67E; /* ChatGPT's green color */
-  font-weight: bold; /* Makes the text bold */
+  font-weight: bold;
 }
