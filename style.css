@@ -284,3 +284,9 @@ body {
   color: #00A67E; /* ChatGPT's green color */
   font-weight: bold;
 }
+
+.profile-image {
+  display: block;
+  margin: 20px auto; /* Centers the image and adds space above/below */
+  max-width: 500px; /* Adjusts the max width */
+}
