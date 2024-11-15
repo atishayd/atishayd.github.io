@@ -34,22 +34,32 @@ document.addEventListener("DOMContentLoaded", () => {
       const projectKey = panel.getAttribute("data-project");
       console.log("Project clicked:", projectKey);
 
+      // Hide all sections first
+      projectDetailsSection.style.display = "none";
+      ocrProjectSection.style.display = "none";
+      phishingNotebookSection.style.display = "none";
+      chatdbProjectSection.style.display = "none";
+
       // Toggle visibility based on selected project
       if (projectKey === "ocr") {
         ocrProjectSection.style.display = "block";
-        phishingNotebookSection.style.display = "none";
-        chatdbProjectSection.style.display = "none";
-        projectDetailsSection.style.display = "none";
       } else if (projectKey === "phishing") {
         phishingNotebookSection.style.display = "block";
-        ocrProjectSection.style.display = "none";
-        chatdbProjectSection.style.display = "none";
-        projectDetailsSection.style.display = "none";
       } else if (projectKey === "project2") {
         chatdbProjectSection.style.display = "block";
-        ocrProjectSection.style.display = "none";
-        phishingNotebookSection.style.display = "none";
-        projectDetailsSection.style.display = "none";
       } else {
         const { title, description } = projectDetails[projectKey];
-        document.getElementById("project-title").textContent
+        document.getElementById("project-title").textContent = title;
+        document.getElementById("project-description").textContent = description;
+        projectDetailsSection.style.display = "block";
+      }
+
+      // Scroll the project panel into view with half visibility
+      const panelTop = panel.offsetTop - (window.innerHeight / 4);
+      window.scrollTo({
+        top: panelTop,
+        behavior: "smooth"
+      });
+    });
+  });
+});
