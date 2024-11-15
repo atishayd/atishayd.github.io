@@ -52,20 +52,4 @@ document.addEventListener("DOMContentLoaded", () => {
         projectDetailsSection.style.display = "none";
       } else {
         const { title, description } = projectDetails[projectKey];
-        document.getElementById("project-title").textContent = title;
-        document.getElementById("project-description").textContent = description;
-        projectDetailsSection.style.display = "block";
-        ocrProjectSection.style.display = "none";
-        phishingNotebookSection.style.display = "none";
-        chatdbProjectSection.style.display = "none";
-      }
-
-      // Scroll the project panel into view with half visibility
-      const panelTop = panel.offsetTop - (window.innerHeight / 4);
-      window.scrollTo({
-        top: panelTop,
-        behavior: "smooth"
-      });
-    });
-  });
-});
+        document.getElementById("project-title").textContent

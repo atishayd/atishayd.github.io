@@ -282,17 +282,4 @@ body {
 /* Style for GitHub Link */
 .github-link a {
   color: #007bff;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.github-link a:hover {
-  text-decoration: underline;
-}
-
-/* Style for GitHub Link Container */
-.github-link-container {
-  margin-top: 30px;
-  padding-bottom: 50px;
-  text-align: center;
-}
+  t
