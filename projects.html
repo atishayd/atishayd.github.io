@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>projects - atishay dikshit</title>
+  <title>projects</title>
   <link rel="stylesheet" href="style.css">
   <!-- Include any additional CSS files required by phishing_email_detection.html if needed -->
 </head>
@@ -12,158 +12,148 @@
     <ul class="nav-links centered-nav">
       <li><a href="index.html">home</a></li>
       <li><a href="resume.html">resume</a></li>
-      <li><a href="papers.html">papers</a></li>
       <li><a href="projects.html">projects</a></li>
       <li><a href="experiences.html">work experience</a></li>
     </ul>
   </div>
   <main class="content">
     <div class="projects-grid">
-      <!-- Phishing Project Panel with vertical text -->
+      <!-- Phishing Project Panel with image and vertical text -->
       <div class="project-panel special-panel" data-project="phishing">
-        <p class="vertical-text">P<br>H<br>I<br>S<br>H<br>I<br>N<br>G</p>
+        <div class="panel-content">
+          <img src="phishing.jpeg" alt="Phishing Project">
+        </div>
       </div>
-      <!-- Project 2 -->
-      <div class="project-panel" data-project="project2">
-        <img src="project2.jpg" alt="Project 2">
-        <p>Project 2</p>
-      </div>
-      <!-- OCR Project with special vertical text -->
+    
+<!-- ChatDB Project Panel -->
+<div class="project-panel special-panel" data-project="project2">
+  <div class="panel-content">
+    <img src="chatdb.png" alt="ChatDB Project">
+  </div>
+</div>
+    
+      <!-- OCR Project with special vertical text and new image -->
       <div class="project-panel special-panel" data-project="ocr">
-        <p class="vertical-text">O<br>C<br>R</p>
+        <div class="panel-content">
+          <img src="ocr.png" alt="OCR Project">
+        </div>
       </div>
     </div>
 
-    <!-- Phishing Project Notebook Section with iframe - Initially hidden -->
-    <section id="phishing-notebook" style="display: none;">
-      <iframe src="phishing_email_detection.html" width="100%" height="800px" style="border:none;"></iframe>
-    </section>
+   <!-- Phishing Project Explanation Section -->
+   <section id="phishing-notebook" style="display: none;">
+    <h3 class="project-title">Phishing Detection using LSTM Architecture</h3>
+    <div class="divider"></div>
 
-    <!-- OCR Project Explanation Section - Initially hidden -->
-    <section id="ocr-project" style="display: none;">
-      <h3>ocr</h3>
+    <div class="content-gap"></div>
 
+    <!-- Project Description Section -->
+    <div class="project-description">
       <h4>Project Description</h4>
-      <p>This project implements an Optical Character Recognition (OCR) system to detect numbers from images. By utilizing advanced C++ techniques, it performs calculations such as horizontal and vertical symmetry, Euler number, and other image-processing metrics to isolate and recognize numbers. This system is especially useful in recognizing numerical patterns in bitmap images by calculating various geometric and mathematical properties, allowing robust detection even with noise or varying image conditions.</p>
+      <p class="body-text">The Phishing Email Detection AI uses a Long Short-Term Memory (LSTM) 
+        neural network to identify and classify phishing emails with high accuracy. 
+        The system leverages natural language processing (NLP) techniques to analyze email content, 
+        focusing on sequential patterns and contextual relationships in text data. 
+        The model preprocesses raw email text by tokenizing and padding sequences to ensure uniform 
+        input for prediction. Trained on a labeled dataset of legitimate and phishing emails, 
+        this ML powered solution provides real-time predictions via an API built with Flask, 
+        making it deployable in production environments.</p>
+    </div>
 
+    <!-- Use Cases Section -->
+    <div class="use-cases">
       <h4>Use Cases</h4>
       <ul>
-        <li>Automated Document Processing: Detecting numbers on scanned financial documents or forms.</li>
-        <li>License Plate Recognition: Identifying and segmenting numbers from license plate images.</li>
-        <li>Survey Data Entry: Recognizing handwritten or printed numbers for statistical data entry tasks.</li>
-        <li>Industrial Sorting: Distinguishing different products based on numerical labels from image captures.</li>
+        <li>Email Security Enhancement: Automatically detects and filters phishing emails within 
+          email platforms, reducing exposure to cyberattacks.</li>
+        <li>Employee Training Programs: Provides datasets for phishing awareness training, 
+          enabling employees to identify and avoid malicious emails.</li>
+        <li>Augmenting Enterprise Security Systems: Integrates with SIEM solutions to 
+          enhance email threat detection using NLP-based analysis.</li>
+        <li>Automated Incident Response: Flags phishing attempts in real-time, enabling 
+          swift action by cybersecurity teams to mitigate risks.</li>
+        <li>Seamless API Integration: Offers REST API endpoints for third-party tools like 
+          CRMs and helpdesk systems to validate emails in real-time.</li>
       </ul>
+    </div>
 
-      <h4>Code Snippets</h4>
+    <!-- GitHub Link Section -->
+    <div class="github-link-container">
+      <p class="github-link"><a href="https://github.com/atishayd/LSTM-phishing-detection" target="_blank">View Full Repo</a></p>
+    </div>
 
-      <!-- Blob Creation and Bounding Boxes -->
-      <div class="explanation">
-        <h5>Blob Creation and Bounding Boxes</h5>
-        <pre class="code-snippet"><code>
-<span class="type">void</span> computeBoundingBox() {
-    for (<span class="type">int</span> r = 0; r < bmp_image.height(); r++) {
-        for (<span class="type">int</span> c = 0; c < bmp_image.width(); c++) {
-            if (isBlobPixel(r, c)) updateBoundingBox(r, c);
-        }
-    }
-}
-        </code></pre>
-        <p class="explanation-text">Tracks blob boundaries by iterating through pixels and updating minimum and maximum coordinates for each blob to accurately define its boundary box.</p>
-      </div>
-
-      <!-- Symmetry Calculations -->
-      <div class="explanation">
-        <h5>Symmetry Calculations</h5>
-        <pre class="code-snippet"><code>
-<span class="type">int</span> computeHorizontalSymmetry() {
-    <span class="type">int</span> symmetry_count = 0;
-    for (<span class="type">int</span> r = 0; r < height / 2; r++) {
-        for (<span class="type">int</span> c = 0; c < width; c++) {
-            if (isSymmetricPixel(r, c)) symmetry_count++;
-        }
-    }
-    return symmetry_count;
-}
-        </code></pre>
-        <p class="explanation-text">Counts horizontally symmetric pixels to calculate the symmetry score, aiding in differentiating circular or symmetrical digits like '0' and '8'.</p>
-      </div>
-
-      <!-- Euler Number Calculation -->
-      <div class="explanation">
-        <h5>Euler Number Calculation</h5>
-        <pre class="code-snippet"><code>
-<span class="type">int</span> calculateEulerNumber() {
-    <span class="type">int</span> components = 0;
-    <span class="type">int</span> holes = 0;
-    for (auto& blob : blobs) {
-        if (blob.isHole()) holes++;
-        else components++;
-    }
-    return components - holes;
-}
-        </code></pre>
-        <p class="explanation-text">Calculates Euler number by counting components and holes, helping to identify numbers with loops like '6' and '8'.</p>
-      </div>
-
-      <!-- Vertical Symmetry Analysis -->
-      <div class="explanation">
-        <h5>Vertical Symmetry Analysis</h5>
-        <pre class="code-snippet"><code>
-<span class="type">int</span> computeVerticalSymmetry() {
-    <span class="type">int</span> symmetry_score = 0;
-    for (<span class="type">int</span> r = 0; r < height; r++) {
-        for (<span class="type">int</span> c = 0; c < width / 2; c++) {
-            if (isSymmetricVertically(r, c)) symmetry_score++;
-        }
-    }
-    return symmetry_score;
-}
-        </code></pre>
-        <p class="explanation-text">Evaluates vertical symmetry score to distinguish asymmetrical digits, aiding in differentiating shapes like '3' and '5'.</p>
-      </div>
-
-      <!-- Key Code Snippets for Digit Classification -->
-      <h4>Digit Classification Rules</h4>
-      <div class="explanation">
-        <h5>Detecting '0'</h5>
-        <pre class="code-snippet"><code>
-if (horizontalSymmetry_ >= 0.88) {
-    digit_ = '0';
-}
-        </code></pre>
-        <p class="explanation-text">Recognizes '0' by its high horizontal symmetry, capturing its circular shape.</p>
-      </div>
-
-      <div class="explanation">
-        <h5>Detecting '4'</h5>
-        <pre class="code-snippet"><code>
-if (horizontalSymmetry_ >= 0.57 && horizontalSymmetry_ <= 0.59) {
-    if (verticalSymmetry_ >= 0.70 && verticalSymmetry_ <= 0.78) {
-        digit_ = '4';
-    }
-}
-        </code></pre>
-        <p class="explanation-text">Identifies '4' by moderate horizontal and high vertical symmetry, characteristic of its structure.</p>
-      </div>
-      
-      <div class="explanation">
-        <h5>Detecting '6'</h5>
-        <pre class="code-snippet"><code>
-          if (euler_ == 0) {
-            if (verticalCentroid_ >= 0.50 && verticalCentroid_ <= 0.57) {
-              if (horizontalSymmetry_ >= 0.75 && horizontalSymmetry_ <= 0.79) {
-                if (verticalSymmetry_ >= 0.50 && verticalSymmetry_ <= 0.70) {
-                  if (horizontalCentroid_ >= 0.42 && horizontalCentroid_ <= 0.46) {
-                    digit_ = '6';
-                  }
-                }
-              }
-            }
-          }
-        </code></pre>
-        <p class="explanation-text">Recognizes '6' by combining Euler number, centroid, and symmetry values, reflecting its asymmetrical shape and distinct structural features.</p>
-      </div>
+    <!-- Embedded Notebook -->
+    <iframe src="phishing_email_detection.html" width="100%" height="800px" style="border:none;"></iframe>
+  </section>
     </section>
+
+<!-- ChatDB (Project 2) Explanation Section -->
+<section id="chatdb-project" style="display: none;">
+  <h3 class="project-title">ChatDB</h3>
+  <div class="divider"></div>
+
+  <div class="content-gap"></div>
+
+  <!-- Project Description Section -->
+  <div class="project-description">
+    <h4>Project Description</h4>
+    <p class="body-text">ChatDB is a dynamic database query generation platform designed to streamline 
+      interactions with SQL and MongoDB databases. It empowers developers, database administrators, 
+      and analysts to efficiently generate, test, and execute structured queries without manual scripting. 
+      The platform leverages pattern-based query templates to ensure robust, error-free operations, 
+      addressing diverse data retrieval, aggregation, and transformation needs.</p>
+  </div>
+
+  <!-- Use Cases Section -->
+  <div class="use-cases">
+    <h4>Use Cases</h4>
+    <ul>
+      <li>Data-Driven Development: Automates query generation for e-commerce and analytics platforms, 
+        enabling real-time user-specific reports using dynamic patterns.</li>
+      <li>Database Optimization: Generates aggregation and filtering queries to 
+        reduce latency in high-traffic applications, enhancing performance during peak loads.</li>
+      <li>Data Science Support: Generates feature engineering queries and group-by 
+        operations for exploratory data analysis, saving preparation time for data scientists.</li>
+      <li>Educational Tool: Offers hands-on practice for SQL and MongoDB, including joins, projections, 
+        and aggregations, with real-time result feedback.</li>
+    </ul>
+  </div>
+
+  <!-- GitHub Link Section -->
+  <div class="github-link-container">
+    <p class="github-link"><a href="https://github.com/atishayd/chatdb" target="_blank">View Full Repo</a></p>
+  </div>
+</section>
+
+
+ <!-- OCR Project Explanation Section -->
+ <section id="ocr-project" style="display: none;">
+  <h3 class="ocr-title">Optical Character Recognition</h3>
+
+  <div class="content-gap"></div>
+
+  <!-- Project Description Section -->
+  <div class="project-description">
+    <h4>Project Description</h4>
+    <p class="body-text">This project implements an Optical Character Recognition (OCR) system to detect numbers from images. By utilizing advanced C++ techniques, it performs calculations such as horizontal and vertical symmetry, Euler number, and other image-processing metrics to isolate and recognize numbers. This system is especially useful in recognizing numerical patterns in bitmap images by calculating various geometric and mathematical properties, allowing robust detection even with noise or varying image conditions.</p>
+  </div>
+
+  <!-- Use Cases Section -->
+  <div class="use-cases">
+    <h4>Use Cases</h4>
+    <ul>
+      <li>Automated Document Processing: Detecting numbers on scanned financial documents or forms.</li>
+      <li>License Plate Recognition: Identifying and segmenting numbers from license plate images.</li>
+      <li>Survey Data Entry: Recognizing handwritten or printed numbers for statistical data entry tasks.</li>
+      <li>Industrial Sorting: Distinguishing different products based on numerical labels from image captures.</li>
+    </ul>
+  </div>
+
+  <!-- GitHub Link Section -->
+  <div class="github-link-container">
+    <p class="github-link"><a href="https://github.com/atishayd/Optical-Character-Recognition/tree/main/project4-ocr" target="_blank">View Full Repo</a></p>
+  </div>
+</section>
 
     <div class="project-details">
       <h3 id="project-title"></h3>

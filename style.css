@@ -80,10 +80,19 @@ body {
 /* Landscape image styling - Display at native size */
 .land-image {
   display: block;
-  margin: 20px auto;
+  margin-top:20px;
+  margin-bottom: 5px;
   max-width: 100%;
   height: auto;
 }
+
+.image-caption {
+  position: relative;
+  text-align: right;
+  font-size: 14px;
+  color: #333; /* Adjust caption color */
+}
+
 
 /* About Me section layout */
 .about-me-section {
@@ -92,18 +101,36 @@ body {
   margin-top: 20px;
 }
 
-/* Headshot image styling */
-.headshot-image {
-  max-width: 200px;
-  border-radius: 10px;
-  margin-right: 20px;
-}
-
 /* About Me text styling */
 .about-me-text {
   font-size: 1em;
   line-height: 1.6;
   text-align: left;
+}
+
+/* Add space between paragraphs in 'About Me' */
+.about-me-text p {
+  margin-bottom: 15px; /* Adds space between paragraphs */
+}
+
+/* Centered Let's Connect section and line */
+.connect-section {
+  margin-top: 10px; /* Add space between the two sections */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align all elements */
+}
+
+/* Adjust heading and line under it */
+.connect-section h2 {
+  margin-bottom: 10px; /* Add space between heading and line */
+}
+
+/* Line under 'Let's Connect' */
+.connect-divider {
+  width: 40%; /* Width of the line */
+  margin: 10px auto; /* Center the line horizontally */
+  border: 1px solid #000; /* Line style */
 }
 
 /* Highlighted text */
@@ -128,23 +155,6 @@ body {
   margin-top: 10px;
 }
 
-/* Experience Image Styling */
-.experience-image img {
-  width: 100%;
-  max-width: 1000px; /* Limits the width of the image */
-  height: auto;
-  margin: 10px 0;
-  border-radius: 10px; /* Adds rounded corners for a polished look */
-}
-
-
-/* Separator line */
-.separator {
-  border: none;
-  border-top: 1px solid #000;
-  margin: 10px 0;
-}
-
 /* Project Panels Grid */
 .projects-grid {
   display: flex;
@@ -155,84 +165,134 @@ body {
 
 .project-panel {
   width: 80px;
-  height: 300px;
-  overflow: hidden;
+  height: 368px;
+  overflow: hidden; /* Contain the scaling effect */
   cursor: pointer;
   text-align: center;
   border: 1px solid #e0e0e0;
-}
-
-.special-panel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #f8f8f8;
 }
 
-.vertical-text {
-  font-size: 2em;
-  font-weight: bold;
-  line-height: 1.2;
-  color: #333;
-}
-
-/* Code Snippet Styling */
-.code-snippet {
-  background-color: #1e1e1e;
-  color: #d4d4d4;
-  padding: 15px;
-  border-radius: 5px;
-  overflow-x: auto;
-  max-width: 100%; /* Allow full width */
-  text-align: left;
-  white-space: pre; /* Preserve indentation */
-}
-
-/* Syntax highlighting */
-.code-snippet .keyword {
-  color: #569cd6;
-}
-.code-snippet .type {
-  color: #4ec9b0;
-}
-.code-snippet .comment {
-  color: #6a9955;
-}
-.code-snippet .string {
-  color: #ce9178;
-}
-.code-snippet .function {
-  color: #dcdcaa;
-}
-
-/* Explanation and Code Snippet Styling */
-.explanation {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.code-explanation-wrapper {
+/* Inner content wrapper to apply hover effect */
+.panel-content {
   display: flex;
   align-items: center;
-  gap: 20px;
-  max-width: 100%; /* Allows the whole section to take full width */
-  padding-bottom: 15px;
-  overflow-x: auto; /* Allows horizontal scrolling if needed */
-  flex-wrap: nowrap;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-#ocr-project {
-  margin-top: 50px;
-  padding: 20px;
-  text-align: left;
-  max-width: 800px;
+.panel-content img {
+  display: block; /* Ensures the image behaves like a block element */
+  max-width: 80px; /* Prevents the image from exceeding the container's width */
+  max-height: 368px; /* Prevents the image from exceeding the container's height */
+  margin: auto; /* Centers the image if flex alignment fails */
 }
 
-.code-snippet code {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1em;
-  color: #dcdcdc;
-  line-height: 1.5;
+/* Hover effect on inner content */
+.project-panel:hover .panel-content {
+  transform: scale(1.05); /* Slightly enlarges the content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+  background-color: #f0f0f0; /* Light gray background on hover */
 }
 
+/* Special panel styling */
+.special-panel {
+  background-color: #f8f8f8;
+}
+
+
+/* Center the icons in the 'Let's Connect' section */
+.social-icons {
+  display: flex; /* Use flexbox to align items in a row */
+  justify-content: center; /* Center the icons horizontally */
+  gap: 40px; /* Space between icons */
+  margin-top: 20px; /* Add some space above the icons */
+  margin-bottom: 10px;
+}
+
+/* Make the icons the same size */
+.social-icon {
+  width: 80px; /* Set a fixed width */
+  height: 80px; /* Set a fixed height to maintain aspect ratio */
+  object-fit: contain; /* Ensure the icon scales properly without distortion */
+}
+
+/* Experience Image Styling */
+.experience-image img {
+  width: 100%;
+  max-width: 1000px; /* Limits the width of the image */
+  height: auto;
+  margin: 10px 0;
+  border-radius: 10px; /* Adds rounded corners for a polished look */
+}
+
+/* Title Styling for Project Sections */
+.project-title, .ocr-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: normal; /* Removes bold styling */
+  margin-bottom: 10px;
+}
+
+/* Divider line matching the title width */
+.divider {
+  width: fit-content; /* Matches the width of the title */
+  margin: 0 auto;
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* Create a gap between the title and content */
+.content-gap {
+  height: 30px;
+}
+
+/* Style for Project Description and Use Cases */
+.project-description, .use-cases {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.project-description h4, .use-cases h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Body text smaller than description titles */
+.body-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Style for Use Case Bullet Points */
+.use-cases ul {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.use-cases li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Style for GitHub Link */
+.github-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.github-link a:hover {
+  text-decoration: underline;
+}
+
+/* Style for GitHub Link Container */
+.github-link-container {
+  margin-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+}

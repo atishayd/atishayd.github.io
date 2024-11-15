@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Project details data
   const projectDetails = {
     project2: {
-      title: "Project 2",
-      description: "Description of Project 2. This project involves..."
+      title: "ChatDB",
+      description: "A project that dynamically generates SQL and MongoDB queries, focusing on efficiency and reliability."
     },
     ocr: {
       title: "OCR Project",
@@ -20,11 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectDetailsSection = document.querySelector(".project-details");
   const ocrProjectSection = document.getElementById("ocr-project");
   const phishingNotebookSection = document.getElementById("phishing-notebook");
+  const chatdbProjectSection = document.getElementById("chatdb-project");
 
-  // Initially hide project details, OCR project section, and phishing notebook section
+  // Initially hide all project details sections
   projectDetailsSection.style.display = "none";
   ocrProjectSection.style.display = "none";
   phishingNotebookSection.style.display = "none";
+  chatdbProjectSection.style.display = "none";
 
   // Handle project panel clicks
   document.querySelectorAll(".project-panel").forEach(panel => {
@@ -34,25 +36,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Toggle visibility based on selected project
       if (projectKey === "ocr") {
-        // Show OCR project section and hide other sections
         ocrProjectSection.style.display = "block";
-        projectDetailsSection.style.display = "none";
         phishingNotebookSection.style.display = "none";
+        chatdbProjectSection.style.display = "none";
+        projectDetailsSection.style.display = "none";
       } else if (projectKey === "phishing") {
-        // Show phishing notebook section and hide other sections
         phishingNotebookSection.style.display = "block";
         ocrProjectSection.style.display = "none";
+        chatdbProjectSection.style.display = "none";
+        projectDetailsSection.style.display = "none";
+      } else if (projectKey === "project2") {
+        chatdbProjectSection.style.display = "block";
+        ocrProjectSection.style.display = "none";
+        phishingNotebookSection.style.display = "none";
         projectDetailsSection.style.display = "none";
       } else {
-        // Show general project details for project2 and hide OCR and phishing sections
         const { title, description } = projectDetails[projectKey];
         document.getElementById("project-title").textContent = title;
         document.getElementById("project-description").textContent = description;
-
         projectDetailsSection.style.display = "block";
         ocrProjectSection.style.display = "none";
         phishingNotebookSection.style.display = "none";
+        chatdbProjectSection.style.display = "none";
       }
+
+      // Scroll the project panel into view with half visibility
+      const panelTop = panel.offsetTop - (window.innerHeight / 4);
+      window.scrollTo({
+        top: panelTop,
+        behavior: "smooth"
+      });
     });
   });
 });
