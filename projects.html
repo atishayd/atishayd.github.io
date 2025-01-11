@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>projects</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Include any additional CSS files required by phishing_email_detection.html if needed -->
+</head>
+<body>
+  <div class="navbar">
+    <ul class="nav-links centered-nav">
+      <li><a href="index.html">home</a></li>
+      <li><a href="resume.html">resume</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="experiences.html">work experience</a></li>
+    </ul>
+  </div>
+  <main class="content">
+    <div class="projects-grid">
+      <!-- iWonder Project Panel -->
+      <div class="project-panel special-panel" data-project="project4" role="button" tabindex="0">
+        <div class="panel-content">
+          <span class="vertical-text">iwonder</span>
+        </div>
+      </div>
+
+      <!-- Phishing Project Panel -->
+      <div class="project-panel special-panel" data-project="phishing" role="button" tabindex="0">
+        <div class="panel-content">
+          <span class="vertical-text">phishing detection</span>
+        </div>
+      </div>
+
+      <!-- ChatDB Project Panel -->
+      <div class="project-panel special-panel" data-project="project2" role="button" tabindex="0">
+        <div class="panel-content">
+          <span class="vertical-text">chatdb</span>
+        </div>
+      </div>
+
+      <!-- Enterprise Network Design Panel -->
+      <div class="project-panel special-panel" data-project="project5" role="button" tabindex="0">
+        <div class="panel-content">
+          <span class="vertical-text">enterprise network design</span>
+        </div>
+      </div>
+
+      <!-- OCR Project Panel -->
+      <div class="project-panel special-panel" data-project="ocr" role="button" tabindex="0">
+        <div class="panel-content">
+          <span class="vertical-text">ocr</span>
+        </div>
+      </div>
+    </div>
+
+   <!-- Phishing Project Explanation Section -->
+   <section id="phishing-notebook" style="display: none;">
+    <h3 class="project-title">Phishing Detection using LSTM Architecture</h3>
+    <div class="divider"></div>
+    <div class="github-link-container">
+      <p class="github-link"><a href="https://github.com/atishayd/LSTM-phishing-detection" target="_blank">View Full Repo</a></p>
+    </div>
+
+    <div class="content-gap"></div>
+
+    <!-- Project Description Section -->
+    <div class="project-description">
+      <h4>Project Description</h4>
+      <p class="body-text">The Phishing Email Detection AI uses a Long Short-Term Memory (LSTM) 
+        neural network to identify and classify phishing emails with high accuracy. 
+        The system leverages natural language processing (NLP) techniques to analyze email content, 
+        focusing on sequential patterns and contextual relationships in text data. 
+        The model preprocesses raw email text by tokenizing and padding sequences to ensure uniform 
+        input for prediction. Trained on a labeled dataset of legitimate and phishing emails, 
+        this ML powered solution provides real-time predictions via an API built with Flask, 
+        making it deployable in production environments.</p>
+    </div>
+
+    <!-- Use Cases Section -->
+    <div class="use-cases">
+      <h4>Use Cases</h4>
+      <ul>
+        <li>Email Security Enhancement: Automatically detects and filters phishing emails within 
+          email platforms, reducing exposure to cyberattacks.</li>
+        <li>Employee Training Programs: Provides datasets for phishing awareness training, 
+          enabling employees to identify and avoid malicious emails.</li>
+        <li>Augmenting Enterprise Security Systems: Integrates with SIEM solutions to 
+          enhance email threat detection using NLP-based analysis.</li>
+        <li>Automated Incident Response: Flags phishing attempts in real-time, enabling 
+          swift action by cybersecurity teams to mitigate risks.</li>
+        <li>Seamless API Integration: Offers REST API endpoints for third-party tools like 
+          CRMs and helpdesk systems to validate emails in real-time.</li>
+      </ul>
+    </div>
+
+    <!-- Embedded Notebook -->
+    <iframe src="phishing_email_detection.html" width="100%" height="800px" style="border:none;"></iframe>
+  </section>
+
+<!-- ChatDB (Project 2) Explanation Section -->
+<section id="chatdb-project" style="display: none;">
+  <h3 class="project-title">ChatDB</h3>
+  <div class="divider"></div>
+  <div class="github-link-container">
+    <p class="github-link"><a href="https://github.com/atishayd/chatdb" target="_blank">View Full Repo</a></p>
+  </div>
+
+  <!-- ChatDB Demo Video -->
+  <div class="demo-video-container">
+    <iframe class="demo-video"
+      src="https://drive.google.com/file/d/1vqoJAHoGYRqF_EqFpr_NjNpDm5WxwDe0/preview"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="content-gap"></div>
+
+  <!-- Project Description Section -->
+  <div class="project-description">
+    <h4>Project Description</h4>
+    <p class="body-text">ChatDB is a dynamic database query generation platform designed to streamline 
+      interactions with SQL and MongoDB databases. It empowers developers, database administrators, 
+      and analysts to efficiently generate, test, and execute structured queries without manual scripting. 
+      The platform leverages pattern-based query templates to ensure robust, error-free operations, 
+      addressing diverse data retrieval, aggregation, and transformation needs.</p>
+  </div>
+
+  <!-- Use Cases Section -->
+  <div class="use-cases">
+    <h4>Use Cases</h4>
+    <ul>
+      <li>Data-Driven Development: Automates query generation for e-commerce and analytics platforms, 
+        enabling real-time user-specific reports using dynamic patterns.</li>
+      <li>Database Optimization: Generates optimized queries for complex data operations, improving 
+        performance and reducing resource utilization.</li>
+      <li>Cross-Platform Integration: Seamlessly works with both SQL and MongoDB databases, providing 
+        a unified interface for different database systems.</li>
+      <li>Rapid Prototyping: Enables quick development and testing of database queries for new 
+        features and applications.</li>
+      <li>Educational Tool: Serves as a learning platform for understanding database operations 
+        and query optimization techniques.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- OCR Project Section -->
+<section id="ocr-project" style="display: none;">
+  <h3 class="project-title">OCR</h3>
+  <div class="divider"></div>
+  <div class="github-link-container">
+    <p class="github-link"><a href="https://github.com/atishayd/ocr-project" target="_blank">View Full Repo</a></p>
+  </div>
+
+  <div class="content-gap"></div>
+
+  <!-- Project Description Section -->
+  <div class="project-description">
+    <h4>Project Description</h4>
+    <p class="body-text">The OCR (Optical Character Recognition) project is an advanced image processing 
+      solution that converts various types of documents into machine-readable text. Using deep learning 
+      techniques and computer vision algorithms, the system accurately extracts text from images, 
+      scanned documents, and handwritten content. The project incorporates pre-processing steps for 
+      image enhancement and post-processing for improved accuracy.</p>
+  </div>
+
+  <!-- Use Cases Section -->
+  <div class="use-cases">
+    <h4>Use Cases</h4>
+    <ul>
+      <li>Document Digitization: Converts physical documents into searchable digital formats, 
+        streamlining document management systems.</li>
+      <li>Data Entry Automation: Automates the extraction of information from forms and documents, 
+        reducing manual data entry efforts.</li>
+      <li>Receipt Processing: Extracts relevant information from receipts for expense tracking 
+        and accounting purposes.</li>
+      <li>Text Extraction from Images: Processes images containing text to enable search and 
+        analysis capabilities.</li>
+      <li>Handwriting Recognition: Converts handwritten notes and documents into digital text 
+        for easier storage and sharing.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- iWonder (Project 4) Explanation Section -->
+<section id="project4-section" style="display: none;">
+  <h3 class="project-title">iWonder</h3>
+  <div class="divider"></div>
+  <div class="github-link-container">
+    <p class="github-link"><a href="https://github.com/atishayd/reddit-semantic-search" target="_blank">View Full Repo</a></p>
+  </div>
+
+  <div class="content-gap"></div>
+
+  <!-- Video Demo Section - Moved up -->
+  <div class="video-demo-container">
+    <!-- iPhone App Demo Only -->
+    <div class="video-wrapper">
+      <div class="iphone-container">
+        <video class="iphone-video" autoplay loop muted playsinline>
+          <source src="iphone-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="iphone-frame"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Description Section -->
+  <div class="project-description">
+    <h4>Project Description</h4>
+    <p class="body-text">iWonder is an iOS app designed to 
+      perform real-time sentiment analysis on Reddit discussions. It leverages advanced Natural 
+      Language Processing (NLP) and VADER sentiment analysis to assess user sentiments on topics 
+      such as product reviews, trends, and community opinions. Powered by a Python-based backend 
+      and a native iOS frontend, iWonder delivers actionable insights with a seamless user experience.</p>
+  </div>
+
+  <!-- Use Cases Section -->
+  <div class="use-cases">
+    <h4>Use Cases</h4>
+    <ul>
+      <li>Informed Consumer Decision-Making: Users analyze Reddit discussions to gauge community 
+        sentiment on products and services, with actionable recommendations helping users decide 
+        whether to buy, wait, or avoid specific items.</li>
+      <li>Market Sentiment Analysis: Enables businesses to monitor Reddit discussions for insights 
+        into customer opinions on their offerings, identifying trends and highlighting critical 
+        feedback for strategic decision-making.</li>
+      <li>Real-Time Sentiment Tracking: Tracks shifting sentiments in real time, making it ideal 
+        for monitoring reactions to product launches, updates, or announcements, offering timely 
+        insights to businesses for reactive strategies.</li>
+      <li>Trend Monitoring for Market Research: Facilitates long-term sentiment tracking to identify 
+        patterns, seasonal trends, or changes in public perception, generating valuable datasets 
+        for research and predictive analytics.</li>
+    </ul>
+  </div>
+
+  <!-- Technical Features Section -->
+  <div class="use-cases">
+    <h4>Technical Features</h4>
+    <ul>
+      <li>Sentiment Analysis Pipeline: Utilizes VADER Sentiment Analysis to classify Reddit 
+        discussions into positive, neutral, and negative sentiment categories.</li>
+      <li>Reddit API Integration: Implements asyncpraw for asynchronous streaming and analysis 
+        of the latest Reddit posts and comments.</li>
+      <li>Visual Data Representation: Features SwiftUI Charts to display sentiment distributions, 
+        offering users an intuitive understanding of trends.</li>
+      <li>Backend Framework: Developed with FastAPI, enabling efficient processing and low-latency 
+        RESTful API communication between the backend and frontend.</li>
+      <li>Mobile-Optimized Interface: Designed for iOS using SwiftUI, incorporating smooth 
+        animations and a user-friendly layout for a native app experience.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Project 5 Section -->
+<section id="project5-section" style="display: none;">
+  <h3 class="project-title">Enterprise Network Design</h3>
+  <div class="divider"></div>
+  <div class="github-link-container">
+    <p class="github-link">
+      <a href="https://drive.google.com/file/d/1-FviyXlojU69tcbMpPoR4LMMn0ZJO69Q/view?usp=sharing" target="_blank">Download Project</a>
+      <span class="link-divider">|</span>
+      <a href="https://docs.google.com/document/d/1mvRfaoc-Ysi350TAJk8KZprQLo-q5rFOnTdW5RsezbI/edit?usp=sharing" target="_blank">View Report</a>
+    </p>
+  </div>
+
+  <!-- Network Topology Image -->
+  <div class="topology-image">
+    <img src="topology.png" alt="Network Topology Diagram">
+  </div>
+
+  <div class="content-gap"></div>
+
+  <!-- Project Description Section -->
+  <div class="project-description">
+    <h4>Project Description</h4>
+    <p class="body-text">Enterprise Network Design is a comprehensive solution engineered to support over 100 devices across 10+ subnets, focusing on scalability, reliability, security, and redundancy. The network is structured using a three-layer hierarchical topology—core, distribution, and access layers—to ensure efficient traffic management, robust fault tolerance, and optimized performance for enterprise-scale operations.</p>
+  </div>
+
+  <!-- Technical Features Section -->
+  <div class="use-cases">
+    <h4>Technical Features</h4>
+    <ul>
+      <li>Network Topology: Implements a hierarchical architecture with dedicated core, distribution, and access layers, facilitating scalability and streamlined traffic flow.</li>
+      <li>Dynamic Routing Protocols: Employs OSPF (Open Shortest Path First) to ensure optimal path selection using Dijkstra's Algorithm, enhancing fault tolerance and minimizing downtime.</li>
+      <li>VLAN Segmentation: Ensures secure and efficient data traffic segmentation across departments, safeguarding sensitive data and improving overall performance.</li>
+      <li>Core Layer Design: Utilizes Cisco Catalyst 9300-24T switches for high-speed inter-VLAN routing and centralized traffic management.</li>
+      <li>Distribution Layer: Features Cisco Catalyst 9200-24T switches with HSRP (Hot Standby Router Protocol) for seamless redundancy and fault tolerance during hardware failures.</li>
+      <li>Access Layer: Deploys Cisco Catalyst 2960X-24PS-L switches for end-device connectivity, configured with VLANs and DHCP pools to streamline IP address management.</li>
+      <li>Enterprise Servers: Includes PowerEdge R350 servers to centralize critical network services such as DNS, DHCP, database hosting, and file sharing.</li>
+      <li>Security Architecture: Secures critical infrastructure using a Fortinet FortiGate firewall to enforce ACLs and provide intrusion prevention for DMZ-hosted services.</li>
+    </ul>
+  </div>
+
+  <!-- Use Cases Section -->
+  <div class="use-cases">
+    <h4>Use Cases</h4>
+    <ul>
+      <li>Enterprise-Level Support: Designed to support over 100 PCs distributed across segmented VLANs, ensuring seamless communication and scalable infrastructure.</li>
+      <li>Traffic Isolation: VLANs segment sensitive traffic to enhance security and prevent unauthorized access between departments.</li>
+      <li>High Availability: HSRP ensures uninterrupted network connectivity by automatically transitioning the gateway role during failures.</li>
+      <li>Dynamic Management: DHCP pools configured for each VLAN dynamically assign IP addresses, reducing administrative effort.</li>
+      <li>Centralized Administration: Unified deployment of PowerEdge R350 servers simplifies maintenance and reduces operational costs.</li>
+      <li>Enhanced Security: Fortinet firewalls enforce ACLs to restrict unauthorized access, safeguarding critical resources.</li>
+      <li>Optimized Performance: OSPF provides efficient data routing by selecting the shortest path, minimizing latency.</li>
+      <li>Cost-Efficient Design: Budget-conscious hardware selections deliver enterprise-grade performance at a reasonable cost.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Add this right before closing body tag -->
+<script src="script.js"></script>
+</body>
+</html>

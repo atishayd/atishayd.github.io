@@ -1,0 +1,555 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply Courier New font */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: #000;
+  background-color: #fff;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Home link flush to the left */
+.home-link {
+  position: absolute;
+  left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+/* Centered navigation links */
+.centered-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.centered-nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+  text-transform: lowercase;
+  padding: 5px 10px;
+  transition: background-color 0.3s, font-weight 0.3s;
+}
+
+/* Yellow highlight effect on hover */
+.centered-nav a:hover,
+.home-link:hover {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/* Main content styling */
+.content {
+  max-width: 800px; /* Align content width with navbar */
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Horizontal line below navbar */
+.navbar-divider {
+  width: 40%;
+  margin: 20px auto;
+  border: 1px solid #000;
+}
+
+/* Left-aligned name title */
+.name-title {
+  text-align: left;
+  font-size: 2.5em;
+  margin-left: 20px;
+  font-weight: normal;
+  color: #333;
+}
+
+/* Landscape image styling - Display at native size */
+.land-image {
+  display: block;
+  margin-top:20px;
+  margin-bottom: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-caption {
+  position: relative;
+  text-align: right;
+  font-size: 14px;
+  color: #333; /* Adjust caption color */
+}
+
+
+/* About Me section layout */
+.about-me-section {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* About Me text styling */
+.about-me-text {
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Add space between paragraphs in 'About Me' */
+.about-me-text p {
+  margin-bottom: 15px; /* Adds space between paragraphs */
+}
+
+/* Centered Let's Connect section and line */
+.connect-section {
+  margin-top: 10px; /* Add space between the two sections */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align all elements */
+}
+
+/* Adjust heading and line under it */
+.connect-section h2 {
+  margin-bottom: 10px; /* Add space between heading and line */
+}
+
+/* Line under 'Let's Connect' */
+.connect-divider {
+  width: 40%; /* Width of the line */
+  margin: 10px auto; /* Center the line horizontally */
+  border: 1px solid #000; /* Line style */
+}
+
+/* Highlighted text */
+.highlight {
+  color: #00A67E;
+  font-weight: bold;
+}
+
+/* Experience styling */
+.experience {
+  margin: 30px 0;
+}
+
+.experience h3 {
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.experience .body {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Project Panels Grid */
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.project-panel {
+  width: 60px;
+  height: 368px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Inner content wrapper to apply hover effect */
+.panel-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  padding: 10px;
+}
+
+/* Remove old image styling and add vertical text styling */
+.panel-content .vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+  color: #000;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+/* Remove the old image-related styles */
+.panel-content img {
+  display: none;
+}
+
+/* Optional: Add space for text below icon */
+.panel-content .panel-title {
+  margin-top: 10px;
+  color: black; /* Change text color to black */
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Hover effect on inner content */
+.project-panel:hover .panel-content {
+  transform: scale(1.02);
+  background-color: transparent;
+}
+
+/* Special panel styling */
+.special-panel {
+  background-color: #FFFFFF !important; /* Override with white background */
+}
+
+
+/* Center the icons in the 'Let's Connect' section */
+.social-icons {
+  display: flex; /* Use flexbox to align items in a row */
+  justify-content: center; /* Center the icons horizontally */
+  gap: 40px; /* Space between icons */
+  margin-top: 20px; /* Add some space above the icons */
+  margin-bottom: 10px;
+}
+
+/* Make the icons the same size */
+.social-icon {
+  width: 80px; /* Set a fixed width */
+  height: 80px; /* Set a fixed height to maintain aspect ratio */
+  object-fit: contain; /* Ensure the icon scales properly without distortion */
+}
+
+/* Experience Image Styling */
+.experience-image img {
+  width: 100%;
+  max-width: 1000px; /* Limits the width of the image */
+  height: auto;
+  margin: 10px 0;
+  border-radius: 10px; /* Adds rounded corners for a polished look */
+}
+
+/* Title Styling for Project Sections */
+.project-title, .ocr-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: normal; /* Removes bold styling */
+  margin-bottom: 10px;
+}
+
+/* Divider line matching the title width */
+.divider {
+  width: fit-content; /* Matches the width of the title */
+  margin: 0 auto 20px auto; /* Consistent margin */
+  border-top: 1px solid #ccc;
+}
+
+/* Create a gap between the title and content */
+.content-gap {
+  height: 15px;  /* Reduced from 30px */
+}
+
+/* Style for Project Description and Use Cases */
+.project-description, .use-cases {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.project-description h4, .use-cases h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Body text smaller than description titles */
+.body-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Style for Use Case Bullet Points */
+.use-cases ul {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.use-cases li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Style for GitHub Link */
+.github-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Add styles for project sections */
+#phishing-notebook,
+#chatdb-project,
+#ocr-project,
+#project4-section,
+#project5-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.project-panel:focus {
+  outline: none;
+}
+
+.project-panel {
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.project-panel:active {
+  transform: none;
+}
+
+/* Update/add these styles to ensure uniform spacing */
+.project-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-top: 40px;  /* Add consistent top margin */
+  margin-bottom: 10px;
+}
+
+/* Ensure consistent section spacing */
+#phishing-notebook,
+#chatdb-project,
+#ocr-project,
+#project4-section,
+#project5-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Ensure consistent spacing for project description sections */
+.project-description {
+  margin-top: 20px;  /* Add consistent top margin */
+  margin-bottom: 20px;
+}
+
+/* Add these new styles for the pulse effect */
+.project-panel {
+  position: relative;
+  overflow: hidden;  /* Ensure the pulse stays within bounds */
+}
+
+/* Update the pulse effect */
+.project-panel::after {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 120, 215, 0.3) 50%,  /* Changed to #0078D7 with 0.3 opacity */
+    rgba(0, 0, 0, 0) 100%
+  );
+  transform: translateY(-100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Update hover animation to start immediately */
+.project-panel:hover::after {
+  animation: pulse 2s ease-in-out infinite;
+  animation-delay: 0s; /* Ensure no delay */
+}
+
+/* Update animation to start from visible position */
+@keyframes pulse {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1; /* Start fully visible */
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 1; /* Stay visible */
+  }
+}
+
+/* Update hover effect for the text */
+.project-panel:hover .vertical-text {
+  color: #000000;  /* Keep text black */
+  font-weight: bold;  /* Add back bold text on hover */
+}
+
+/* Add styles for the video demonstration section */
+.video-demo-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;  /* Reduced from 40px 0 */
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.video-wrapper {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* Xcode video styling */
+.xcode-video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video section title styling */
+.video-wrapper h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+/* Refined iPhone container */
+.iphone-container {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/* Video positioning */
+.iphone-video {
+  position: absolute;
+  width: 270px;          /* Exact width of iPhone screen */
+  height: 585px;         /* Exact height of iPhone screen */
+  top: 7px;             /* Position from top of frame */
+  left: 15px;           /* Position from left of frame */
+  object-fit: cover;
+  border-radius: 40px;
+  z-index: 1;
+}
+
+/* iPhone frame */
+.iphone-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('iphone.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Style for GitHub Link Container */
+.github-link-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.github-link {
+  margin: 0;
+}
+
+/* Network Topology Image styling */
+.topology-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.topology-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for link divider */
+.link-divider {
+  margin: 0 10px;
+  color: #0078D7;
+  font-weight: bold;
+}
+
+/* Style both download and report links */
+.github-link a[href*="drive.google.com"],
+.github-link a[href*="docs.google.com"] {
+  color: #0078D7;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.github-link a[href*="drive.google.com"]:hover,
+.github-link a[href*="docs.google.com"]:hover {
+  color: #005a9e;
+}
+
+/* Demo video styling */
+.demo-video-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.demo-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+}
