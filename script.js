@@ -8,17 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get all project sections
   const phishingSection = document.getElementById("phishing-notebook");
   const chatdbSection = document.getElementById("chatdb-project");
-  const aifredSection = document.getElementById("aifred-project");  // Changed from ocrSection
+  const aifredSection = document.getElementById("aifred-project");  // Make sure this matches exactly
   const project4Section = document.getElementById("project4-section");
   const project5Section = document.getElementById("project5-section");
 
   console.log("Sections found:", {
     phishing: !!phishingSection,
     chatdb: !!chatdbSection,
-    aifred: !!aifredSection,  // Changed from ocr
+    aifred: !!aifredSection,  // Make sure this matches exactly
     project4: !!project4Section,
     project5: !!project5Section
   }); // Debug log
+
+  // Add console.log for debugging
+  console.log("AiFRED section found:", !!aifredSection);
 
   // Function to hide all sections
   const hideAllSections = () => {
@@ -55,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     panel.addEventListener("click", (e) => {
       console.log("Panel clicked"); // Debug log
       const projectKey = panel.getAttribute("data-project");
-      console.log("Project key:", projectKey); // Debug log
+      console.log("Clicked project:", projectKey); // Add this debug line
 
       // Hide all sections first
       hideAllSections();
@@ -74,10 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Showing chatdb section");
           }
           break;
-        case "aifred":  // Changed from "ocr"
+        case "aifred":  // Make sure this matches data-project exactly
           if (aifredSection) {
             aifredSection.style.display = "block";
             console.log("Showing AiFRED section");
+          } else {
+            console.log("AiFRED section not found");  // Add this debug line
           }
           break;
         case "project4":
