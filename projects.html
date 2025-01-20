@@ -18,6 +18,13 @@
   </div>
   <main class="content">
     <div class="projects-grid">
+      <!-- AiFRED Project Panel -->
+      <div class="project-panel special-panel" data-project="aifred" role="button" tabindex="0">
+        <div class="panel-content">
+          <span class="vertical-text">aifred</span>
+        </div>
+      </div>
+
       <!-- iWonder Project Panel -->
       <div class="project-panel special-panel" data-project="project4" role="button" tabindex="0">
         <div class="panel-content">
@@ -43,13 +50,6 @@
       <div class="project-panel special-panel" data-project="project5" role="button" tabindex="0">
         <div class="panel-content">
           <span class="vertical-text">enterprise network design</span>
-        </div>
-      </div>
-
-      <!-- OCR Project Panel -->
-      <div class="project-panel special-panel" data-project="ocr" role="button" tabindex="0">
-        <div class="panel-content">
-          <span class="vertical-text">ocr</span>
         </div>
       </div>
     </div>
@@ -145,42 +145,139 @@
   </div>
 </section>
 
-<!-- OCR Project Section -->
-<section id="ocr-project" style="display: none;">
-  <h3 class="project-title">OCR</h3>
+<!-- AiFRED Project Section -->
+<section id="aifred-project" style="display: none;">
+  <h3 class="project-title">AiFRED</h3>
   <div class="divider"></div>
   <div class="github-link-container">
-    <p class="github-link"><a href="https://github.com/atishayd/ocr-project" target="_blank">View Full Repo</a></p>
+    <p class="github-link"><a href="https://github.com/atishayd/aifred" target="_blank">View Full Repo</a></p>
   </div>
 
-  <div class="content-gap"></div>
-
-  <!-- Project Description Section -->
+  <!-- Project Description -->
   <div class="project-description">
-    <h4>Project Description</h4>
-    <p class="body-text">The OCR (Optical Character Recognition) project is an advanced image processing 
-      solution that converts various types of documents into machine-readable text. Using deep learning 
-      techniques and computer vision algorithms, the system accurately extracts text from images, 
-      scanned documents, and handwritten content. The project incorporates pre-processing steps for 
-      image enhancement and post-processing for improved accuracy.</p>
+    <h4>Project Overview</h4>
+    <p class="body-text">
+      AiFRED serves as an all-in-one solution for classroom management and analytics, combining face recognition, 
+      hand-raise detection, and question relevance analysis to enhance the teaching and learning experience.
+    </p>
   </div>
 
-  <!-- Use Cases Section -->
+  <!-- Core Features -->
+  <div class="use-cases">
+    <h4>Core Features</h4>
+    <ul>
+      <li><strong>Attendance Management and Student Records:</strong>
+        <ul>
+          <li>Uses face recognition (via OpenCV and face_recognition libraries) and embedding comparisons to identify students</li>
+          <li>Stores detailed student information in MongoDB</li>
+          <li>Allows instructors to create and manage courses</li>
+        </ul>
+      </li>
+      <li><strong>Real-time Engagement and Hand-Raise Detection:</strong>
+        <ul>
+          <li>Employs Mediapipe for hand tracking</li>
+          <li>Logs hand raises in MongoDB for participation insights</li>
+        </ul>
+      </li>
+      <li><strong>Question Relevance Analysis:</strong>
+        <ul>
+          <li>Uses OpenAI APIs (GPT-4 and Whisper) for question classification</li>
+          <li>Automatically transcribes and analyzes student questions</li>
+        </ul>
+      </li>
+      <li><strong>Data Visualization and Analytics:</strong>
+        <ul>
+          <li>Offers PyQt5 interface for metrics analysis</li>
+          <li>Generates Matplotlib charts for performance insights</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Use Cases -->
   <div class="use-cases">
     <h4>Use Cases</h4>
     <ul>
-      <li>Document Digitization: Converts physical documents into searchable digital formats, 
-        streamlining document management systems.</li>
-      <li>Data Entry Automation: Automates the extraction of information from forms and documents, 
-        reducing manual data entry efforts.</li>
-      <li>Receipt Processing: Extracts relevant information from receipts for expense tracking 
-        and accounting purposes.</li>
-      <li>Text Extraction from Images: Processes images containing text to enable search and 
-        analysis capabilities.</li>
-      <li>Handwriting Recognition: Converts handwritten notes and documents into digital text 
-        for easier storage and sharing.</li>
+      <li>Classroom Attendance and Monitoring:
+        <ul>
+          <li>Automatic face recognition-based attendance</li>
+          <li>Ideal for large classes requiring systematic tracking</li>
+        </ul>
+      </li>
+      <li>Participation Tracking:
+        <ul>
+          <li>Logs hand raises and questions for engagement analysis</li>
+          <li>Helps identify students needing intervention</li>
+        </ul>
+      </li>
+      <li>Data-Driven Teaching Adjustments:
+        <ul>
+          <li>Real-time analytics on question relevance and engagement</li>
+          <li>Identifies areas of confusion for content refinement</li>
+        </ul>
+      </li>
+      <li>Course Management:
+        <ul>
+          <li>Supports multiple courses and department-wide rollout</li>
+          <li>Cross-references trends across courses for curriculum optimization</li>
+        </ul>
+      </li>
     </ul>
   </div>
+
+  <!-- Technical Features -->
+  <div class="use-cases">
+    <h4>Technical Features</h4>
+    <ul>
+      <li><strong>Face Recognition and Computer Vision:</strong>
+        <ul>
+          <li>OpenCV and face_recognition for detection and matching</li>
+          <li>Efficient embedding storage in MongoDB</li>
+        </ul>
+      </li>
+      <li><strong>Hand-Raise Detection:</strong>
+        <ul>
+          <li>Mediapipe Pose Estimation for landmark detection</li>
+          <li>Threshold-based hand raise detection</li>
+        </ul>
+      </li>
+      <li><strong>Audio Processing:</strong>
+        <ul>
+          <li>PyAudio and wave for audio capture</li>
+          <li>OpenAI Whisper for transcription</li>
+        </ul>
+      </li>
+      <li><strong>Database Architecture:</strong>
+        <ul>
+          <li>MongoDB with optimized indexes</li>
+          <li>Transaction support for data integrity</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Tech Stack -->
+  <div class="use-cases">
+    <h4>Tech Stack</h4>
+    <ul>
+      <li><strong>Programming Language:</strong> Python 3.x</li>
+      <li><strong>UI & Frontend:</strong> PyQt5, Matplotlib</li>
+      <li><strong>Database:</strong> MongoDB with pymongo</li>
+      <li><strong>AI & ML:</strong> OpenAI GPT-4, Whisper, OpenCV, Mediapipe</li>
+      <li><strong>Additional Tools:</strong> face_recognition, NumPy, python-dotenv</li>
+    </ul>
+  </div>
+
+  <!-- Demo Video -->
+  <div class="demo-video-container">
+    <iframe class="demo-video"
+      src="https://drive.google.com/file/d/your_demo_video_id/preview"
+      allow="autoplay"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="content-gap"></div>
 </section>
 
 <!-- iWonder (Project 4) Explanation Section -->

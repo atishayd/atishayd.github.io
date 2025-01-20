@@ -8,24 +8,45 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get all project sections
   const phishingSection = document.getElementById("phishing-notebook");
   const chatdbSection = document.getElementById("chatdb-project");
-  const ocrSection = document.getElementById("ocr-project");
+  const aifredSection = document.getElementById("aifred-project");  // Changed from ocrSection
   const project4Section = document.getElementById("project4-section");
   const project5Section = document.getElementById("project5-section");
 
   console.log("Sections found:", {
     phishing: !!phishingSection,
     chatdb: !!chatdbSection,
-    ocr: !!ocrSection,
+    aifred: !!aifredSection,  // Changed from ocr
     project4: !!project4Section,
     project5: !!project5Section
   }); // Debug log
 
   // Function to hide all sections
   const hideAllSections = () => {
-    [phishingSection, chatdbSection, ocrSection, project4Section, project5Section].forEach(section => {
+    [phishingSection, chatdbSection, aifredSection, project4Section, project5Section].forEach(section => {
       if (section) section.style.display = "none";
     });
   };
+
+  // Update the project mapping
+  const projectMapping = {
+    'project4': 'project4-section',
+    'phishing': 'phishing-notebook',
+    'project2': 'chatdb-project',
+    'project5': 'project5-section',
+    'aifred': 'aifred-project'  // Changed from 'ocr': 'ocr-project'
+  };
+
+  // Update the panel selector in HTML
+  const panelHtml = `
+    <!-- ... other panels ... -->
+    
+    <!-- AiFRED Project Panel (replacing OCR panel) -->
+    <div class="project-panel special-panel" data-project="aifred" role="button" tabindex="0">
+      <div class="panel-content">
+        <span class="vertical-text">aifred</span>
+      </div>
+    </div>
+  `;
 
   // Add click handlers to panels
   panels.forEach(panel => {
@@ -53,10 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Showing chatdb section");
           }
           break;
-        case "ocr":
-          if (ocrSection) {
-            ocrSection.style.display = "block";
-            console.log("Showing OCR section");
+        case "aifred":  // Changed from "ocr"
+          if (aifredSection) {
+            aifredSection.style.display = "block";
+            console.log("Showing AiFRED section");
           }
           break;
         case "project4":

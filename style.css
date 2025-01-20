@@ -308,6 +308,29 @@ body {
   margin-bottom: 10px;
 }
 
+/* Style for nested lists in project descriptions */
+.use-cases ul ul {
+  margin-left: 20px;  /* Indentation for sub-lists */
+  margin-top: 5px;    /* Space between parent list item and sub-list */
+  margin-bottom: 10px; /* Space after sub-list */
+}
+
+.use-cases ul ul li {
+  font-size: 0.95rem;  /* Slightly smaller font for sub-items */
+  margin-bottom: 5px;  /* Less space between sub-items */
+  list-style-type: circle;  /* Different bullet style for sub-items */
+}
+
+/* Style for parent list items with sub-lists */
+.use-cases > ul > li {
+  margin-bottom: 15px;  /* More space between main list items */
+}
+
+/* Remove bottom margin from last sub-item */
+.use-cases ul ul li:last-child {
+  margin-bottom: 0;
+}
+
 /* Style for GitHub Link */
 .github-link a {
   color: #007bff;
