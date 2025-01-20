@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Script loaded"); // Debug log
 
+  // Debug: Check if AiFRED section exists in DOM
+  console.log("AiFRED section HTML:", document.getElementById("aifred-project")?.outerHTML || "Not found");
+
   // Get all project panels
   const panels = document.querySelectorAll(".project-panel");
   console.log("Found panels:", panels.length); // Debug log
