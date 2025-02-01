@@ -14,13 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const aifredSection = document.getElementById("aifred-project");  // Make sure this matches exactly
   const project4Section = document.getElementById("project4-section");
   const project5Section = document.getElementById("project5-section");
+  const djarvisSection = document.getElementById("djarvis-project"); // Add DJARVIS section
 
   console.log("Sections found:", {
     phishing: !!phishingSection,
     chatdb: !!chatdbSection,
     aifred: !!aifredSection,  // Make sure this matches exactly
     project4: !!project4Section,
-    project5: !!project5Section
+    project5: !!project5Section,
+    djarvis: !!djarvisSection // Add DJARVIS to debug log
   }); // Debug log
 
   // Add console.log for debugging
@@ -28,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to hide all sections
   const hideAllSections = () => {
-    [phishingSection, chatdbSection, aifredSection, project4Section, project5Section].forEach(section => {
+    [phishingSection, chatdbSection, aifredSection, project4Section, project5Section, djarvisSection].forEach(section => {
       if (section) section.style.display = "none";
     });
   };
@@ -39,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     'phishing': 'phishing-notebook',
     'project2': 'chatdb-project',
     'project5': 'project5-section',
-    'aifred': 'aifred-project'  // Changed from 'ocr': 'ocr-project'
+    'aifred': 'aifred-project',
+    'djarvis': 'djarvis-project' // Add DJARVIS mapping
   };
 
   // Update the panel selector in HTML
@@ -98,6 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
           if (project5Section) {
             project5Section.style.display = "block";
             console.log("Showing Project 5 section");
+          }
+          break;
+        case "djarvis": // Add DJARVIS case
+          if (djarvisSection) {
+            djarvisSection.style.display = "block";
+            console.log("Showing DJARVIS section");
+          } else {
+            console.log("DJARVIS section not found");
           }
           break;
       }
